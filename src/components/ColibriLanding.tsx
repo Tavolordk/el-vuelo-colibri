@@ -10,21 +10,58 @@ import React, { useMemo, useState } from "react";
 // =======================
 
 // Pequeños íconos inline para no depender de librerías
-const IconMenu = (props:any) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6" aria-hidden {...props}>
-    <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+// arriba ya tienes: import React, { useMemo, useState } from "react";
+type SvgProps = React.SVGProps<SVGSVGElement>;
+
+const IconMenu = ({ className, ...rest }: SvgProps) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={2}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={`w-6 h-6 ${className ?? ""}`}
+    aria-hidden
+    {...rest}
+  >
+    <line x1="3" y1="6" x2="21" y2="6" />
+    <line x1="3" y1="12" x2="21" y2="12" />
+    <line x1="3" y1="18" x2="21" y2="18" />
   </svg>
 );
-const IconX = (props:any) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6" aria-hidden {...props}>
-    <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+
+const IconX = ({ className, ...rest }: SvgProps) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={2}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={`w-6 h-6 ${className ?? ""}`}
+    aria-hidden
+    {...rest}
+  >
+    <line x1="18" y1="6" x2="6" y2="18" />
+    <line x1="6" y1="6" x2="18" y2="18" />
   </svg>
 );
-const Hummingbird = (props:any) => (
-  <svg viewBox="0 0 64 64" className={`w-7 h-7 ${props.className||""}`} aria-hidden>
-    <path d="M12 28c10-6 22-4 30 2 4 3 7 7 10 11-7-1-14-3-19-7-4 3-8 6-12 9 2-4 4-8 7-12-6-1-11-1-16 0z" fill="currentColor"/>
+
+const Hummingbird = ({ className, ...rest }: SvgProps) => (
+  <svg
+    viewBox="0 0 64 64"
+    className={`w-7 h-7 ${className ?? ""}`}
+    aria-hidden
+    {...rest}
+  >
+    <path
+      d="M12 28c10-6 22-4 30 2 4 3 7 7 10 11-7-1-14-3-19-7-4 3-8 6-12 9 2-4 4-8 7-12-6-1-11-1-16 0z"
+      fill="currentColor"
+    />
   </svg>
 );
+
 
 const copy = {
   es: {
