@@ -4,9 +4,14 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "El Vuelo del Colibrí | Servicios Psicológicos",
   description:
-    "Acompañamiento psicológico en línea y presencial para tu bienestar emocional y crecimiento personal.",
+    "Acompañamiento psicológico profesional para tu bienestar emocional.",
   icons: {
-    icon: "/brand/logo-colibri.png",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-192x192.png", sizes: "192x192", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
   },
 };
 
